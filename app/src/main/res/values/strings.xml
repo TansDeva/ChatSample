@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Chat UI</string>
+    <string name="chat_hint">Enter text</string>
+</resources>

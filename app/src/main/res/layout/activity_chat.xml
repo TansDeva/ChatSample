@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.tanshul.chat.viewModel.ChatScreenViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.tanshul.chat.helper.widget.EmptyRecyclerView
+            android:id="@+id/chatList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/send_chat_margin"
+            app:layout_constraintBottom_toTopOf="@+id/sendText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+        <LinearLayout
+            android:id="@+id/sendText"
+            android:background="@drawable/bg_input_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/send_chat_margin"
+            android:layout_marginEnd="@dimen/send_chat_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <EditText
+                android:id="@+id/inputText"
+                android:hint="@string/chat_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onTextChanged="@{viewModel.onChatTextChanged}"
+                />
+
+            <ImageView
+                android:enabled="false"
+                android:id="@+id/sendButton"
+                android:layout_width="@dimen/send_chat_image"
+                android:layout_height="@dimen/send_chat_image"
+                android:layout_marginStart="@dimen/send_chat_margin"
+                android:onClick="@{() -> viewModel.onChatSend()}"
+                android:padding="@dimen/send_chat_padding"
+                android:src="@drawable/ic_chat_send"
+                app:tint="@color/chatSendDisable"
+                />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

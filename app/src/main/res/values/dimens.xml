@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_logo">96dp</dimen>
+    <dimen name="send_chat_image">48dp</dimen>
+    <dimen name="send_chat_margin">8dp</dimen>
+    <dimen name="send_chat_padding">8dp</dimen>
+    <dimen name="send_chat_corners">8dp</dimen>
+    <dimen name="chat_margin_v">2dp</dimen>
+    <dimen name="chat_margin_h">8dp</dimen>
+    <dimen name="chat_padding_v">4dp</dimen>
+    <dimen name="chat_padding_h">16dp</dimen>
+    <dimen name="chat_text_size">14sp</dimen>
+    <dimen name="chat_text_media">14sp</dimen>
+    <dimen name="chat_time_text">10sp</dimen>
+    <dimen name="chat_item_width_min">96dp</dimen>
+    <dimen name="chat_item_height_video">240dp</dimen>
+    <dimen name="chat_audio_icon">48dp</dimen>
+    <dimen name="chat_audio_padding">8dp</dimen>
+</resources>
