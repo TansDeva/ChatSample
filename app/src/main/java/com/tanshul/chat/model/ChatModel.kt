@@ -12,4 +12,5 @@ data class ChatModel(
     val timeStamp: Long = getTimeStamp()
 ) {
     var isPlaying = false
+    var isMine = from == ChatFrom.ME
 }

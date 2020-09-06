@@ -28,6 +28,38 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             />
 
+        <RelativeLayout
+            android:id="@+id/emptyView"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/send_chat_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/chatList"
+            app:layout_constraintLeft_toLeftOf="@+id/chatList"
+            app:layout_constraintRight_toRightOf="@+id/chatList"
+            app:layout_constraintTop_toTopOf="@+id/chatList">
+
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="@dimen/splash_logo"
+                android:layout_height="@dimen/splash_logo"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_app_logo"
+                />
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/appLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/chat_empty_margin"
+                android:text="@string/chat_empty"
+                android:textColor="@color/black"
+                android:textSize="@dimen/chat_empty_text"
+                />
+        </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/sendText"
             android:background="@drawable/bg_input_back"

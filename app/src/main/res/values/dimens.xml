@@ -16,4 +16,6 @@
     <dimen name="chat_item_height_video">240dp</dimen>
     <dimen name="chat_audio_icon">48dp</dimen>
     <dimen name="chat_audio_padding">8dp</dimen>
+    <dimen name="chat_empty_margin">16dp</dimen>
+    <dimen name="chat_empty_text">18sp</dimen>
 </resources>

@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="@dimen/splash_logo"
         android:layout_height="@dimen/splash_logo"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/ic_app_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

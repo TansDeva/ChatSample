@@ -2,12 +2,14 @@ package com.tanshul.chat.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.tanshul.chat.base.BaseChatHolder
 import com.tanshul.chat.helper.AdapterCallback
 import com.tanshul.chat.helper.ChatType
 import com.tanshul.chat.helper.logException
 import com.tanshul.chat.model.ChatModel
+import com.tanshul.chat.ui.R
 import com.tanshul.chat.ui.databinding.RowChatAudioBinding
 import com.tanshul.chat.ui.databinding.RowChatImageBinding
 import com.tanshul.chat.ui.databinding.RowChatTextBinding
@@ -21,6 +23,7 @@ class ChatAdapter(
     private val chatList: MutableList<ChatModel>
 ): RecyclerView.Adapter<BaseChatHolder>(), AdapterCallback {
     val itemMap = HashMap<Long, Int>()
+    var lastPosition = -1
 
     fun insertItems(items: List<ChatModel>) {
         val oldCount = itemCount
@@ -64,6 +67,13 @@ class ChatAdapter(
             if (position !in chatList.indices) return
             with(chatList[position]) {
                 holder.bindData(this)
+                if (position > lastPosition) {
+                    with(holder.itemView) {
+                        val animId = if (isMine) R.anim.anim_slide_right else R.anim.anim_slide_left
+                        startAnimation(AnimationUtils.loadAnimation(context, animId))
+                    }
+                    lastPosition = position
+                }
             }
         } catch (e: Exception) {
             e.logException()

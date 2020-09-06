@@ -18,11 +18,10 @@ open class BaseChatHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
 
     fun setupLayout(chatModel: ChatModel, layout: ViewGroup, chatText: TextView, chatTime: TextView) {
-        val isMine = chatModel.from == ChatFrom.ME
-        layout.setBackgroundResource(if (isMine) R.drawable.bg_chat_mine else R.drawable.bg_chat_other)
+        layout.setBackgroundResource(if (chatModel.isMine) R.drawable.bg_chat_mine else R.drawable.bg_chat_other)
         layout.layoutParams = (layout.layoutParams as RelativeLayout.LayoutParams).apply {
             width = ChatActivity.layoutWidth
-            if (isMine) {
+            if (chatModel.isMine) {
                 addRule(RelativeLayout.ALIGN_PARENT_END)
             } else {
                 removeRule(RelativeLayout.ALIGN_PARENT_END)

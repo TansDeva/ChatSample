@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Chat UI</string>
     <string name="chat_hint">Enter text</string>
+    <string name="chat_empty">You need not stay idle, you can also start communication</string>
 </resources>

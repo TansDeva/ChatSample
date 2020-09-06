@@ -18,6 +18,7 @@ import com.tanshul.chat.ui.adapter.ChatAdapter
 import com.tanshul.chat.ui.databinding.ActivityChatBinding
 import com.tanshul.chat.viewModel.ChatScreenViewModel
 import com.tanshul.chat.viewModel.ViewModelFactory
+import kotlinx.android.synthetic.main.activity_chat.view.*
 
 class ChatActivity : BaseActivity() {
     lateinit var viewModel: ChatScreenViewModel
@@ -44,6 +45,7 @@ class ChatActivity : BaseActivity() {
         layoutWidth = (ChatValues.ChatWidthRatio * deviceWidth).toInt()
         chatAdapter = ChatAdapter(mutableListOf())
         binding.chatList.adapter = chatAdapter
+        binding.chatList.setEmptyView(binding.emptyView)
 
         //Init ViewModel
         val factory = ViewModelFactory(ChatRepository())

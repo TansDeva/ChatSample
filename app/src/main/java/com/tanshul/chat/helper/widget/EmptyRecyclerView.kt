@@ -17,7 +17,17 @@ class EmptyRecyclerView(
 
     constructor(context: Context, attrs: AttributeSet?): this(context, attrs, 0)
 
-    init {
+    private fun checkIfEmpty() {
+        val itemCount = adapter?.itemCount ?: 0
+        emptyView?.let {
+            it.show(itemCount == 0)
+            show(itemCount != 0)
+        }
+    }
+
+    fun setEmptyView(view: View) {
+        emptyView = view
+        checkIfEmpty()
         adapter?.registerAdapterDataObserver(object: AdapterDataObserver() {
             override fun onChanged() {
                 super.onChanged()
@@ -34,18 +44,5 @@ class EmptyRecyclerView(
                 checkIfEmpty()
             }
         })
-    }
-
-    private fun checkIfEmpty() {
-        val itemCount = adapter?.itemCount ?: 0
-        emptyView?.let {
-            it.show(itemCount == 0)
-            show(itemCount != 0)
-        }
-    }
-
-    fun setEmptyView(view: View) {
-        emptyView = view
-        checkIfEmpty()
     }
 }

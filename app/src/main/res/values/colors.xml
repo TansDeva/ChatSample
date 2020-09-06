@@ -12,5 +12,5 @@
     <color name="chatSendDisable">#87878A</color>
     <color name="chatSendIcon">#3700B3</color>
     <color name="chatMine">#FFAAD4</color>
-    <color name="chatOther">#888888</color>
+    <color name="chatOther">#AAAAAA</color>
 </resources>
