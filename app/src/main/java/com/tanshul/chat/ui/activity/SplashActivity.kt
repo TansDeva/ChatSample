@@ -2,9 +2,9 @@ package com.tanshul.chat.ui.activity
 
 import android.os.Bundle
 import android.os.Handler
+import com.tanshul.chat.R
 import com.tanshul.chat.base.BaseActivity
 import com.tanshul.chat.helper.AppConstants.SplashDelay
-import com.tanshul.chat.ui.R
 
 class SplashActivity : BaseActivity() {
 

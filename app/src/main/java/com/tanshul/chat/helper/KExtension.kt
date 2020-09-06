@@ -1,9 +1,12 @@
 package com.tanshul.chat.helper
 
 import android.view.View
+import com.tanshul.chat.BuildConfig
 
 fun Exception.logException() {
-    printStackTrace()
+    if (BuildConfig.DEBUG) {
+        printStackTrace()
+    }
 }
 
 fun View.show(isShow: Boolean) {

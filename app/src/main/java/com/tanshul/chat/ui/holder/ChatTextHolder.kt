@@ -1,8 +1,8 @@
 package com.tanshul.chat.ui.holder
 
 import com.tanshul.chat.base.BaseChatHolder
+import com.tanshul.chat.databinding.RowChatTextBinding
 import com.tanshul.chat.model.ChatModel
-import com.tanshul.chat.ui.databinding.RowChatTextBinding
 
 class ChatTextHolder(
     private val binding: RowChatTextBinding

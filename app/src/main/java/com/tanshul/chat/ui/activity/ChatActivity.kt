@@ -6,19 +6,17 @@ import android.graphics.PorterDuff
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.tanshul.chat.R
 import com.tanshul.chat.base.BaseActivity
+import com.tanshul.chat.databinding.ActivityChatBinding
 import com.tanshul.chat.helper.ChatValues
-import com.tanshul.chat.helper.utils.AppUtils
 import com.tanshul.chat.helper.utils.AppUtils.getColorRes
 import com.tanshul.chat.helper.utils.AppUtils.getDisplayMetrics
 import com.tanshul.chat.helper.utils.AppUtils.showKeyboard
 import com.tanshul.chat.repository.ChatRepository
-import com.tanshul.chat.ui.R
 import com.tanshul.chat.ui.adapter.ChatAdapter
-import com.tanshul.chat.ui.databinding.ActivityChatBinding
 import com.tanshul.chat.viewModel.ChatScreenViewModel
 import com.tanshul.chat.viewModel.ViewModelFactory
-import kotlinx.android.synthetic.main.activity_chat.view.*
 
 class ChatActivity : BaseActivity() {
     lateinit var viewModel: ChatScreenViewModel

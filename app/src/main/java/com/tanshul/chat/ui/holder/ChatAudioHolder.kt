@@ -1,11 +1,11 @@
 package com.tanshul.chat.ui.holder
 
 import com.tanshul.chat.base.BaseChatHolder
+import com.tanshul.chat.databinding.RowChatAudioBinding
 import com.tanshul.chat.helper.AdapterCallback
 import com.tanshul.chat.helper.handler.MusicPlayer.pause
 import com.tanshul.chat.helper.handler.MusicPlayer.startPlayback
 import com.tanshul.chat.model.ChatModel
-import com.tanshul.chat.ui.databinding.RowChatAudioBinding
 
 class ChatAudioHolder(
     private val binding: RowChatAudioBinding

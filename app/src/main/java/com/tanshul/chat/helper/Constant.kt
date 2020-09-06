@@ -10,7 +10,7 @@ object AppConstants {
 
 object ChatValues {
     const val ChatWidthRatio = 0.7f
-    val AddChatDelay = TimeUnit.SECONDS.toMillis(2)
+    val AddChatDelay = TimeUnit.MINUTES.toMillis(2)
     val DateFormatter = SimpleDateFormat("hh:mm a", Locale.ENGLISH)
 
     fun getTimeFormat(timeStamp: Long): String {

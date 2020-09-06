@@ -5,11 +5,10 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.tanshul.chat.helper.ChatFrom
+import com.tanshul.chat.R
 import com.tanshul.chat.helper.ChatValues.getTimeFormat
 import com.tanshul.chat.helper.show
 import com.tanshul.chat.model.ChatModel
-import com.tanshul.chat.ui.R
 import com.tanshul.chat.ui.activity.ChatActivity
 
 open class BaseChatHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

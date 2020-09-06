@@ -2,8 +2,8 @@ package com.tanshul.chat.ui.holder
 
 import android.graphics.BitmapFactory
 import com.tanshul.chat.base.BaseChatHolder
+import com.tanshul.chat.databinding.RowChatImageBinding
 import com.tanshul.chat.model.ChatModel
-import com.tanshul.chat.ui.databinding.RowChatImageBinding
 
 class ChatImageHolder(
     private val binding: RowChatImageBinding

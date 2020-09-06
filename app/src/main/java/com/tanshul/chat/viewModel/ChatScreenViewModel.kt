@@ -3,11 +3,11 @@ package com.tanshul.chat.viewModel
 import android.os.Handler
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.tanshul.chat.R
 import com.tanshul.chat.helper.ChatFrom
 import com.tanshul.chat.helper.ChatType
 import com.tanshul.chat.helper.ChatValues.AddChatDelay
 import com.tanshul.chat.model.ChatModel
-import com.tanshul.chat.ui.R
 
 class ChatScreenViewModel : ViewModel() {
     private var itemsAdded = 0
